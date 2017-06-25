@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="checkout_cart_product_add_after">
+        <observer name="phpcuong_customer_custom_price" instance="PHPCuong\Customer\Observer\CustomPrice" />
+    </event>
+    <event name="checkout_onepage_controller_success_action">
+        <observer name="phpcuong_customer_logout" instance="PHPCuong\Customer\Observer\CustomerLogout" />
+    </event>
+</config>
